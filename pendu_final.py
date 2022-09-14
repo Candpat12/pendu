@@ -1,3 +1,5 @@
+import os
+import time
 # Mise en place des fonctions lose() et win()
 
 def lose() :
@@ -91,6 +93,8 @@ while again :
           count = 0
           break
 
+  os.system('CLS')      #on clear la console pour ne pas montrer le mot
+  time.sleep(1)
   life = 7          # Définition d'une variable pour le nombre de vies du joueur
   game_on = True
   turns = 0
