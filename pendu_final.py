@@ -1,5 +1,3 @@
-import os
-import time
 # Mise en place des fonctions lose() et win()
 
 def lose() :
@@ -92,9 +90,6 @@ while again :
       if count == len(word) :         # Quand toutes les lettres du mot sont autorisées, alors on peut commencer le pendu et on réinitialise la variable 'count' pour la suite
           count = 0
           break
-
-  os.system('CLS')      #on clear la console pour ne pas montrer le mot
-  time.sleep(1)
   life = 7          # Définition d'une variable pour le nombre de vies du joueur
   game_on = True
   turns = 0
@@ -169,7 +164,7 @@ while again :
     else :          # Si elle l'est, alors on affiche le nombre de fois où elle apparait
       print('\nLa lettre est dans le mot et elle y apparait', count, 'fois !\n', guess, '\n\nVous avez', life, 'vies.\n')
 
-
+    count = 0
     if life <= 0 :
         assert life <= 0
         print(pendus[life])
